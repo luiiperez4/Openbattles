@@ -1,0 +1,45 @@
+
+<div class="jumbotron">
+  <h3 class="feed-title">Battlefield 4</h3>
+  <h3 class="feed-title">Currently Looking For A Clan Battle</h3>
+  <hr/>
+
+  <div ng-repeat="data in post| orderBy:created:true">
+
+    <div class="feed-container row post-block">
+        <div class="col-md-6 col-sm-6">
+          <div class="field">
+            <a class="icon-link" href="http://bf4stats.com/{{data.consoleType.value}}/{{data.consoleID | encodeURIComponent}}" target="_blank"><span class="glyphicon glyphicon-user"></span></a><span class="player-name feed-text">{{data.consoleID}}</span>
+          </div>
+
+          <div class="field">
+            <a class="icon-link" href="https://account.xbox.com/en-US/Messages?gamerTag={{data.consoleID | encodeURIComponent}}" target="_blank"><span class="glyphicon glyphicon-envelope" ng-show="data.consoleType.value == 'xone' || data.consoleType.value == 'xbox'"></span></a>
+            <span class="glyphicon glyphicon-hdd"></span><span class="feed-text"> {{data.consoleType.name}}</span>
+          </div>
+
+          <div class="field">
+            <span class="feed-text">{{data.gameMode}} | {{data.numberOfPlayers}} v {{data.numberOfPlayers}}</span>
+          </div>
+
+        </div>
+
+      <div class="col-md-6 col-sm-6">
+        <div  ng-show="data.rules" class="field">
+          <span class="glyphicon glyphicon-comment"></span><span class="game-rules feed-text">{{data.rules}}</span>
+        </div>
+
+        <div ng-show="data.hasServer" class="field">
+          <span class="feed-text">Clan's Server: {{data.serverName}}</span>
+        </div>
+
+        <div class="field">
+          <span class="glyphicon glyphicon-time"></span><span class="feed-text" am-time-ago="data.created"></span>
+        </div>
+      </div>
+
+    </div>
+    <div class="seperator"></div>
+    <br/>
+  </div>
+
+</div>

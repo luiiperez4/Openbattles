@@ -1,0 +1,230 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../server');
+var debug = require('debug')('openbattles.com:server');
+var http = require('http');
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+var io = require('socket.io')(server);
+
+var mongoose = require('mongoose');
+var configDB = require('../config/database.js');
+mongoose.connect(configDB.url);
+
+
+//********Hardline
+Hardline = require('../app/models/hardline');
+
+io.on('connection', function(socket){
+
+  Hardline.find({}, function(err, docs){
+    if(err)
+      throw err;
+    socket.emit('post hardline', docs);
+  });
+
+  socket.on('send hardline', function(data){
+    var newHardline = new Hardline({
+      consoleType: data.consoleType,
+      consoleID: data.consoleID,
+      gameMode: data.gameMode,
+      numberOfPlayers: data.numberOfPlayers,
+      rules: data.rules,
+      hasServer: data.hasServer,
+      serverName: data.serverName,
+      created: Date.now()
+    });
+    newHardline.save(function(err){
+      if (err)
+        throw err;
+    });
+
+    io.emit('append hardline', newHardline);
+
+  });
+
+});
+
+
+//********BF4
+BF4 = require('../app/models/bf4');
+
+io.on('connection', function(socket){
+
+  BF4.find({}, function(err, docs){
+    if(err)
+      throw err;
+    socket.emit('post bf4', docs);
+  });
+
+  socket.on('send bf4', function(data){
+    var newBF4 = new BF4({
+      consoleType: data.consoleType,
+      consoleID: data.consoleID,
+      gameMode: data.gameMode,
+      numberOfPlayers: data.numberOfPlayers,
+      rules: data.rules,
+      hasServer: data.hasServer,
+      serverName: data.serverName,
+      created: Date.now()
+    });
+    newBF4.save(function(err){
+      if (err)
+        throw err;
+    });
+
+    io.emit('append bf4', newBF4);
+
+  });
+
+});
+
+
+//********CODAW
+CODAW = require('../app/models/codaw');
+
+io.on('connection', function(socket){
+
+  CODAW.find({}, function(err, docs){
+    if(err)
+      throw err;
+    socket.emit('post codaw', docs);
+  });
+
+  socket.on('send codaw', function(data){
+    var newCODAW = new CODAW({
+      consoleType: data.consoleType,
+      consoleID: data.consoleID,
+      gameMode: data.gameMode,
+      numberOfPlayers: data.numberOfPlayers,
+      rules: data.rules,
+      created: Date.now()
+    });
+    newCODAW.save(function(err){
+      if (err)
+        throw err;
+    });
+
+    io.emit('append codaw', newCODAW);
+
+  });
+
+});
+
+
+
+//********CODAW
+CODBO3 = require('../app/models/codbo3');
+
+io.on('connection', function(socket){
+
+  CODBO3.find({}, function(err, docs){
+    if(err)
+      throw err;
+    socket.emit('post codbo3', docs);
+  });
+
+  socket.on('send codbo3', function(data){
+    var newCODBO3 = new CODBO3({
+      consoleType: data.consoleType,
+      consoleID: data.consoleID,
+      gameMode: data.gameMode,
+      numberOfPlayers: data.numberOfPlayers,
+      rules: data.rules,
+      created: Date.now()
+    });
+    newCODBO3.save(function(err){
+      if (err)
+        throw err;
+    });
+
+    io.emit('append codbo3', newCODBO3);
+
+  });
+
+});
+
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}

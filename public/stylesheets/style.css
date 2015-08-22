@@ -1,0 +1,182 @@
+body{
+
+}
+
+.btn:focus{
+  outline: none;
+}
+/**
+ Homepage
+**/
+
+.navbar-default{
+  border-radius: 0;
+  opacity: 0.7;
+}
+
+.intro{
+  position:relative;
+  padding:10px;
+  margin:0 auto;
+  width:90%;
+  background-color: rgba(242,127,62,1);
+  border-radius: 5px;
+  text-align: center;
+  color:white;
+}
+
+a {
+  color:white;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.btn-game{
+    color: white;
+    background-color: rgba(12,111,178,1);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn-game:hover{
+  color:rgba(12,111,178,1);
+  background-color: rgba(12,111,178,0.5);
+}
+
+
+/**
+Request
+**/
+
+.btn-request{
+  background-color: rgba(255,70,79,1);
+  color: white;
+}
+
+.btn-request:hover{
+  color: rgba(255,70,79,1);
+  background-color: rgba(255,70,79,0.5);
+}
+
+
+.showbox{
+  -webkit-transition: all linear .7s;
+  transition: all linear .7s;
+}
+
+.showbox.ng-hide{
+  opacity:0;
+}
+
+.request-title{
+  text-align: center;
+}
+
+.jumbotron{
+  padding:20px 0;
+  margin-bottom: 20px;
+}
+
+.btn-submit{
+  background-color: rgba(242,127,62,1);
+  color: white;
+}
+
+.btn-submit:hover{
+  color: rgba(242,127,62,1);
+  background-color: rgba(242,127,62,0.5);
+}
+
+.warning-text{
+  color:red;
+}
+
+
+/**
+Post Feed
+**/
+.feed-container{
+  width:90%;
+  margin:0 auto;
+}
+
+.feed-title{
+  margin:10px;
+  text-align: center;
+}
+
+.field{
+  margin:10px 0;
+}
+
+.glyphicon{
+  vertical-align: bottom;
+    font-size: 1.8em;
+    margin-right: 5px;
+}
+
+.icon-link{
+  color:#2371B2;
+}
+
+.player-name{
+  padding:5px;
+  color:red;
+  background:black;
+  border-radius: 5px;
+}
+
+.game-mode{
+  padding:5px;
+  background-color:white;
+  border-radius: 5px;
+}
+
+.game-rules{
+  background-color:darkgray;
+  color:white;
+  padding:5px;
+  border-radius: 5px;
+}
+
+.feed-text{
+  font-size:1.2em;
+}
+
+.seperator{
+  width:100%;
+  border:1px solid gray;
+}
+
+.post-block{
+  background-color: white;
+  border-radius: 5px;
+  padding:10px 0 0 0;
+  margin-bottom: 20px;
+}
+
+/**
+Footer
+**/
+
+.footer{
+  background-color: rgba(255,255,255,0.2);
+  margin-top:20px;
+  padding:10px;
+  text-align: center;
+}
+
+
+/**
+Form validation
+**/
+
+select.ng-invalid{
+  border:1px solid red;
+}
+
+input.ng-invalid{
+  border:1px solid red;
+}

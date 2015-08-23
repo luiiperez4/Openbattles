@@ -215,6 +215,15 @@ Footer
   text-align: center;
 }
 
+a.email{
+  color:gray;
+  text-decoration: underline;
+}
+
+a.email:hover{
+  color:red;
+}
+
 
 /**
 Form validation

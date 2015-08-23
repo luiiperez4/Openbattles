@@ -15,11 +15,7 @@ app.controller('BF4FeedCtrl', ['$scope', 'postSocket', function($scope, postSock
     {name:'Team Deathmatch'},
     {name:'Obliteration'},
     {name:'Defuse'},
-    {name:'Domination'},
-    {name:'Air Superiority'},
-    {name:'Capture the Flag'},
-    {name:'Carrier Assault'},
-    {name:'Chain Link'}
+    {name:'Domination'}
   ];
 
   postSocket.on('post bf4', function(data){

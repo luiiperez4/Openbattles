@@ -8,16 +8,12 @@ app.controller('BF4PostCtrl', ['$scope', 'postSocket', function($scope, postSock
   ];
 
   $scope.gameModes = [
-    {name:'Conquest', players:'16'},
+    {name:'Conquest', players:'32'},
     {name:'Rush', players:'16'},
-    {name:'Team Deathmatch', players:'16'},
+    {name:'Team Deathmatch', players:'10'},
     {name:'Obliteration', players:'16'},
-    {name:'Defuse', players:'16'},
-    {name:'Domination', players:'16'},
-    {name:'Air Superiority', players:'16'},
-    {name:'Capture the Flag', players:'16'},
-    {name:'Carrier Assault', players:'16'},
-    {name:'Chain Link', players:'16'}
+    {name:'Defuse', players:'5'},
+    {name:'Domination', players:'10'}
   ];
 
   $scope.insertdata = function(){

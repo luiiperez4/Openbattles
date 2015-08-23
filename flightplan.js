@@ -17,7 +17,7 @@ plan.target('staging', [
 
 plan.target('production', [
   {
-    host: '104.131.88.38',
+    host: '45.55.57.42',
     username: 'deploy',
     agent: process.env.SSH_AUTH_SOCK
   },

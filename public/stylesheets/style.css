@@ -30,6 +30,7 @@ body{
   border-top-left-radius: 5px;
   text-align: center;
   color:white;
+  text-transform: uppercase;
   border-bottom: 2px solid white;
 }
 
@@ -45,7 +46,7 @@ body{
   height: 100px;
   background: gray;
   border-bottom: 2px solid white;
-
+  display: none;
 }
 
 
@@ -122,14 +123,35 @@ Request
 /**
 Post Feed
 **/
+
+
 .feed-container{
   width:90%;
   margin:0 auto;
 }
 
+.feed-title-container{
+    text-align: center;
+}
+
 .feed-title{
   margin:10px;
+
+}
+
+.feed-time-info{
+
+}
+
+.zero-posts{
   text-align: center;
+  font-size: 20px;
+}
+
+.form-filter{
+  width: 50%;
+  margin: 0 auto;
+
 }
 
 .field{

@@ -1,5 +1,25 @@
 app.controller('HardlineFeedCtrl', ['$scope', 'postSocket', function($scope, postSocket){
 
+  $scope.consoles =[
+    {name:''},
+    {name:'PS4'},
+    {name:'PS3'},
+    {name:'Xbox One'},
+    {name:'Xbox 360'}
+  ];
+
+  $scope.gameModes = [
+    {name:''},
+    {name:'Rescue'},
+    {name:'Blood Money'},
+    {name:'Heist'},
+    {name:'Hotwire'},
+    {name:'Conquest'},
+    {name:'Crosshair'},
+    {name:'Team Deathmatch'},
+    {name:'Bounty Hunter'}
+  ];
+
   postSocket.on('post hardline', function(data){
     $scope.post = data;
   });

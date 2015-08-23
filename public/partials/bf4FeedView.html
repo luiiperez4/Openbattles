@@ -1,10 +1,30 @@
 
 <div class="jumbotron">
-  <h3 class="feed-title">Battlefield 4</h3>
-  <h3 class="feed-title">Currently Looking For A Clan Battle</h3>
+  <div class="feed-title-container">
+    <h3 class="feed-title">Battlefield 4</h3>
+    <h3 class="feed-title">Currently Looking For A Clan Battle</h3>
+    <span class="feed-time-info">Your post will be automatically deleted after 15 mins</span>
+  </div>
   <hr/>
 
-  <div ng-repeat="data in post| orderBy:created:true">
+  <div class="form-filter">
+    <span><strong>Filter Posts By: </strong></filter><br/><br/>
+    <div class="form-group">
+      <label for="gamerName">Console</label>
+      <select class="form-control" name="console" ng-model="console" ng-options="id.name for id in consoles">
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="gameMode">Game Mode</label>
+      <select class="form-control" name="mode" ng-model="mode" ng-options="mode.name for mode in gameModes">
+      </select>
+    </div>
+  </div>
+  <hr/>
+  <div class="zero-posts" ng-show="post == ''">
+    Zero players looking for battles - add yourself and let them find you!
+  </div>
+  <div ng-repeat="data in post | filter:console.name | filter:mode.name | orderBy:created:true">
 
     <div class="feed-container row post-block">
         <div class="col-md-6 col-sm-6">

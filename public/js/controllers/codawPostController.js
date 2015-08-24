@@ -1,4 +1,4 @@
-app.controller('CodAWPostCtrl', ['$scope', 'postSocket', function($scope, postSocket){
+app.controller('CodAWPostCtrl', ['$scope', 'postSocket', 'Flash', function($scope, postSocket, Flash){
 
   $scope.consoles =[
     {name:'PS4', value:'ps4'},
@@ -36,6 +36,9 @@ app.controller('CodAWPostCtrl', ['$scope', 'postSocket', function($scope, postSo
     $scope.gameMode = "";
     $scope.numberOfPlayers = "";
     $scope.rules = "";
+
+    var message = '<strong>Your post was successfully entered.  Good luck on your battle!</strong>';
+    Flash.create('success', message, 'custom-class');
   }
 
 }]).

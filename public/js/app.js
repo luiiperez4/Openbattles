@@ -1,1 +1,1 @@
-var app = angular.module('openbattles', ['btford.socket-io', 'angularMoment', 'ngAnimate']);
+var app = angular.module('openbattles', ['btford.socket-io', 'angularMoment', 'ngAnimate', 'flash']);

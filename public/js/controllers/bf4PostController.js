@@ -1,4 +1,4 @@
-app.controller('BF4PostCtrl', ['$scope', 'postSocket', function($scope, postSocket){
+app.controller('BF4PostCtrl', ['$scope', 'postSocket', 'Flash', function($scope, postSocket, Flash){
 
   $scope.consoles =[
     {name:'PS4', value:'ps4'},
@@ -37,6 +37,10 @@ app.controller('BF4PostCtrl', ['$scope', 'postSocket', function($scope, postSock
     $scope.hasServer = false;
     $scope.serverTrue = false;
     $scope.serverName = "";
+
+
+    var message = '<strong>Your post was successfully entered.  Good luck on your battle!</strong>';
+    Flash.create('success', message, 'custom-class');
   }
 
 }]).

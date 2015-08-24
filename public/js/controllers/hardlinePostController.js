@@ -1,4 +1,4 @@
-app.controller('HardlinePostCtrl', ['$scope', 'postSocket', function($scope, postSocket){
+app.controller('HardlinePostCtrl', ['$scope', 'postSocket', 'Flash', function($scope, postSocket, Flash){
 
   $scope.consoles =[
     {name:'PS4', value:'ps4'},
@@ -39,6 +39,9 @@ app.controller('HardlinePostCtrl', ['$scope', 'postSocket', function($scope, pos
     $scope.hasServer = false;
     $scope.serverTrue = false;
     $scope.serverName = "";
+
+    var message = '<strong>Your post was successfully entered.  Good luck on your battle!</strong>';
+    Flash.create('success', message, 'custom-class');
   }
 
 }]).

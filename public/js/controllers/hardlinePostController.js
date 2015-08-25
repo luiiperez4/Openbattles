@@ -1,6 +1,7 @@
 app.controller('HardlinePostCtrl', ['$scope', 'postSocket', 'Flash', function($scope, postSocket, Flash){
 
   $scope.consoles =[
+    {name:'PC', value:'pc'},
     {name:'PS4', value:'ps4'},
     {name:'PS3', value:'ps3'},
     {name:'Xbox One', value:'xone'},

@@ -2,6 +2,7 @@ app.controller('HardlineFeedCtrl', ['$scope', 'postSocket', function($scope, pos
 
   $scope.consoles =[
     {name:''},
+    {name:'PC'},
     {name:'PS4'},
     {name:'PS3'},
     {name:'Xbox One'},

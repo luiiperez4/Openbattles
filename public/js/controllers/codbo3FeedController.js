@@ -2,6 +2,7 @@ app.controller('CodBO3FeedCtrl', ['$scope', 'postSocket', function($scope, postS
 
   $scope.consoles =[
     {name:''},
+    {name:'PC'},
     {name:'PS4'},
     {name:'PS3'},
     {name:'Xbox One'},

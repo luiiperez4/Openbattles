@@ -75,6 +75,11 @@ a:hover{
 }
 
 
+.delay{
+  -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+  animation-delay: 1s;
+}
+
 
 
 /**

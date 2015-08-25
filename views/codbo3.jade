@@ -3,7 +3,7 @@ extends ./template.jade
 block content
   hr
   div
-    button( class="btn btn-danger btn-lg btn-block raised gradient btn-request"
+    button( class="btn btn-danger btn-lg btn-block raised gradient btn-request animated bounce delay"
             type="button" name="button" ng-click="isRequesting = !isRequesting") List your Clan
   hr
   div( class="showbox" ng-show="isRequesting" ng-controller="CodBO3PostCtrl")

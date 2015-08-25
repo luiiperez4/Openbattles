@@ -2,7 +2,7 @@ app.controller('BF4FeedCtrl', ['$scope', 'postSocket', function($scope, postSock
 
   $scope.consoles =[
     {name:''},
-    {name:'PC'}
+    {name:'PC'},
     {name:'PS4'},
     {name:'PS3'},
     {name:'Xbox One'},

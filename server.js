@@ -35,7 +35,7 @@ app.use('/', codbo3);
 app.use('/', rocket);
 
 // Serve favicon
-app.use(favicon(__dirname +'/public/images/favicon-96x96-2.png'));
+app.use(favicon(__dirname +'/public/images/favicon.ico'));
 
 
 // catch 404 and forward to error handler

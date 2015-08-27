@@ -5,14 +5,18 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var app = express();
+
+// Serve favicon
+app.use(favicon(__dirname + '/public/images/favicon-96x96.png'));
+
+
 var routes = require('./routes/home');
 var hardline = require('./routes/hardline');
 var bf4 = require('./routes/bf4');
 var codaw = require('./routes/codaw');
 var codbo3 = require('./routes/codbo3');
 var rocket = require('./routes/rocket');
-
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,9 +37,6 @@ app.use('/', bf4);
 app.use('/', codaw);
 app.use('/', codbo3);
 app.use('/', rocket);
-
-// Serve favicon
-app.use(favicon(__dirname +'/public/images/favicon.ico'));
 
 
 // catch 404 and forward to error handler

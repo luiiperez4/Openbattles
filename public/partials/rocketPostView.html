@@ -1,0 +1,37 @@
+
+  <h1 class="request-title">Request a Game</h1>
+  <div class="container">
+    <div class="jumbotron" style="padding:10px">
+      <form name="requestForm">
+      <div class="form-group">
+        <label for="console">Console</label>
+        <select class="form-control" name="consoleType" ng-model="consoleType" ng-options="console.name for console in consoles" required>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="gamerName">Console ID/User ID</label>
+        <input type="text" class="form-control" id="consoleID" placeholder="User ID" ng-model="consoleID" required>
+      </div>
+
+
+      <div class="form-group">
+        <label for="gameMode">Game Mode</label>
+        <select class="form-control" name="gameMode" ng-model="gameMode" ng-options="mode.name for mode in gameModes" required>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="rules">Ban & Protect</label>
+        <textarea class="form-control" name="rules" ng-model="rules"></textarea>
+      </div>
+
+      <div>
+        <input type="button" value="Submit a Battle" ng-click="insertdata()" ng-disabled="requestForm.$invalid" class="btn btn-lg btn-warning btn-block raised gradient btn-submit"></input>
+        <span class="warning-text">Fields in red are REQUIRED!</span>
+      </div>
+      </form>
+      <div flash-message="5000"></div>
+    </div>
+  </div>

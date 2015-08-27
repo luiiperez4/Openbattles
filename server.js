@@ -10,6 +10,7 @@ var hardline = require('./routes/hardline');
 var bf4 = require('./routes/bf4');
 var codaw = require('./routes/codaw');
 var codbo3 = require('./routes/codbo3');
+var rocket = require('./routes/rocket');
 
 var app = express();
 
@@ -31,6 +32,11 @@ app.use('/', hardline);
 app.use('/', bf4);
 app.use('/', codaw);
 app.use('/', codbo3);
+app.use('/', rocket);
+
+// Serve favicon
+app.use(favicon(__dirname +'/public/images/favicon-96x96-2.png'));
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

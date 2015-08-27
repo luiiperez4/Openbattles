@@ -161,6 +161,38 @@ io.on('connection', function(socket){
 });
 
 
+//********CODAW
+ROCKET = require('../app/models/rocket');
+
+io.on('connection', function(socket){
+
+  ROCKET.find({}, function(err, docs){
+    if(err)
+      throw err;
+    socket.emit('post rocket', docs);
+  });
+
+  socket.on('send rocket', function(data){
+    var newROCKET = new ROCKET({
+      consoleType: data.consoleType,
+      consoleID: data.consoleID,
+      gameMode: data.gameMode,
+      numberOfPlayers: data.numberOfPlayers,
+      rules: data.rules,
+      created: Date.now()
+    });
+    newROCKET.save(function(err){
+      if (err)
+        throw err;
+    });
+
+    io.emit('append rocket', newROCKET);
+
+  });
+
+});
+
+
 /**
  * Listen on provided port, on all network interfaces.
  */

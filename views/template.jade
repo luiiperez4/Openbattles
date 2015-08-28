@@ -11,14 +11,13 @@ html(lang="en")
     link( rel='stylesheet' href='stylesheets/buttons.css')
     link( rel='stylesheet' href='stylesheets/animate.css')
   body(ng-app="openbattles")
-    div( ng-include="'partials/nav.html'")
     div( ng-include="'partials/header.html'")
 
     block content
 
     block footer
       div.footer
-        p.footer
+        p.footer-content
           span.glyphicon.glyphicon-copyright-mark
           span Copyright 2015 - Openbattles.com | Comments, Questions, Feedback, Suggestions, or Bugs...
           span

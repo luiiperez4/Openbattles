@@ -175,6 +175,7 @@ io.on('connection', function(socket){
   socket.on('send rocket', function(data){
     var newROCKET = new ROCKET({
       consoleType: data.consoleType,
+      region: data.region,
       consoleID: data.consoleID,
       gameMode: data.gameMode,
       numberOfPlayers: data.numberOfPlayers,

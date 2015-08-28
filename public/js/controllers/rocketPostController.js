@@ -15,9 +15,15 @@ app.controller('RocketPostCtrl', ['$scope', 'postSocket', 'Flash', function($sco
     {name:'Ranked-Standard', players:'3'}
   ];
 
+  $scope.regions = [
+    {name:'US'},
+    {name:'EU'}
+  ];
+
   $scope.insertdata = function(){
     var data = {
       'consoleType':$scope.consoleType,
+      'region':$scope.region.name,
       'consoleID':$scope.consoleID,
       'gameMode':$scope.gameMode.name,
       'numberOfPlayers':$scope.gameMode.players,
@@ -27,6 +33,7 @@ app.controller('RocketPostCtrl', ['$scope', 'postSocket', 'Flash', function($sco
     postSocket.emit('send rocket', data);
 
     $scope.consoleType = "";
+    $scope.region = "";
     $scope.consoleID = "";
     $scope.gameMode = "";
     $scope.rules = "";

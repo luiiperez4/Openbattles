@@ -17,6 +17,12 @@ app.controller('RocketFeedCtrl', ['$scope', 'postSocket', function($scope, postS
     {name:'Ranked-Standard'}
   ];
 
+  $scope.regions = [
+    {name:''},
+    {name:'US'},
+    {name:'EU'}
+  ];
+
   postSocket.on('post rocket', function(data){
     $scope.post = data;
   });

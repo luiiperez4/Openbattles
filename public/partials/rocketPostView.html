@@ -23,6 +23,12 @@
       </div>
 
       <div class="form-group">
+        <label for="region">Region</label>
+        <select class="form-control" name="region" ng-model="region" ng-options="region.name for region in regions" required>
+        </select>
+      </div>
+
+      <div class="form-group">
         <label for="rules">Server Name & Info</label>
         <textarea class="form-control" name="rules" ng-model="rules"></textarea>
       </div>

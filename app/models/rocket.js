@@ -5,6 +5,7 @@ var rocketSchema = mongoose.Schema({
                   name: String,
                   value: String,
                },
+  region: String,
   consoleID: String,
   gameMode: String,
   numberOfPlayers: Number,

@@ -37,6 +37,26 @@ body{
 .main-title{
 
 }
+.supporters{
+  position: relative;
+  padding: 10px;
+  margin: 0 auto;
+  width: 90%;
+  color: white;
+  background: #323432;
+  text-align: center;
+  height: 200px;
+}
+
+img{
+  padding:0
+  margin: 0
+}
+
+.box{
+  width: 200px;
+  height: 100px;
+}
 
 .google-ads{
   position:relative;
@@ -63,10 +83,8 @@ a:hover{
   padding:20px;
   display: flex;
   flex-direction: column;
-
   background-color: #323432;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom: 2px solid white
 }
 
 .btn-game{

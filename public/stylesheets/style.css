@@ -6,6 +6,71 @@ padding-top: 30px;
   outline: none;
 }
 /**
+Icons
+**/
+
+i{
+  color: white;
+  padding: 0px 5px;
+
+}
+
+.fa-male-color{
+  color: #22AAE5;
+}
+
+.fa-envelope-color{
+  color: black;
+}
+
+.fa-gamepad-color{
+  color: gray;
+}
+
+.fa-comments-color{
+  color: lightgray;
+}
+
+.fa-clock-o-color{
+  color: black;
+}
+
+.fa-server-color{
+  color:#EA3A55;
+}
+
+.fa-bullseye-color{
+  color:#D0FF00;
+}
+
+.fa-globe-color{
+  color: #6393DB;
+}
+
+.fa-check-square-o-color{
+  color: yellow;
+}
+
+.fa-male:hover{
+  color: red;
+}
+
+.fa-envelope-o:hover{
+  color: red;
+}
+
+/* social icons */
+
+.fa-circle{
+  color: #22AAE5;
+}
+
+.fa-envelope:hover, .fa-twitter:hover, .fa-facebook:hover{
+  color: #22AAE5;
+}
+
+
+/**
  Homepage
 **/
 a.home-button{
@@ -53,10 +118,6 @@ span.title{
   flex-direction: column;
   font-size: 1.1em;
   color: #2FD5FF;
-}
-
-.check{
-  color: yellow;
 }
 
 
@@ -207,13 +268,10 @@ Post Feed
     margin-right: 5px;
 }
 
-.icon-link{
-  color:#2371B2;
-}
 
 .player-name{
   padding:5px;
-  color:red;
+  color:yellow;
   background:black;
   border-radius: 5px;
 }

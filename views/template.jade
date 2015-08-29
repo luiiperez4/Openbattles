@@ -10,6 +10,7 @@ html(lang="en")
     link( rel='stylesheet' href='stylesheets/style.css')
     link( rel='stylesheet' href='stylesheets/buttons.css')
     link( rel='stylesheet' href='stylesheets/animate.css')
+    link( rel='stylesheet' href='libs/font-awesome/css/font-awesome.min.css')
   body(ng-app="openbattles")
     div( ng-include="'partials/header.html'")
     div( ng-include="'partials/instructions.html'")
@@ -18,10 +19,19 @@ html(lang="en")
     block footer
       div.footer
         p.footer-content
-          span.glyphicon.glyphicon-copyright-mark
-          span Copyright 2015 - Openbattles.com | Comments, Questions, Feedback, Suggestions, or Bugs...
+          i.fa.fa-copyright.fa-lg
+          span Copyright 2015 - Openbattles.com
+          i.fa.fa-circle
+          span Comments, Questions, Feedback, Suggestions, or Bugs
+          i.fa.fa-circle
           span
-            a.email(href="mailto:lp1134@hotmail.com") email us.
+            a.email(href="mailto:lp1134@hotmail.com")
+              i.fa.fa-envelope.fa-lg
+          span
+            a( href="https://twitter.com/Openbattlescom")
+              i.fa.fa-twitter.fa-lg
+            a( href="https://facebook.com/openbattles")
+              i.fa.fa-facebook.fa-lg
 
     // Angular Core Components
     script( src="libs/angular/angular.js")

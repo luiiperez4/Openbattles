@@ -35,30 +35,30 @@
     <div class="feed-container row post-block">
         <div class="col-md-6 col-sm-6">
           <div class="field">
-          <span class="glyphicon glyphicon-user"></span><span class="player-name feed-text">{{data.consoleID}}</span>
+          <i class="fa fa-male fa-2x fa-male-color"></i><span class="player-name feed-text">{{data.consoleID}}</span>
           </div>
 
           <div class="field">
-            <span class="glyphicon glyphicon-hdd"></span><span class="feed-text"> {{data.consoleType.name}}</span>
+            <i class="fa fa-gamepad fa-lg fa-gamepad-color"></i><span class="feed-text"> {{data.consoleType.name}}</span>
           </div>
 
           <div class="field">
-            <span class="feed-text">{{data.gameMode}} | {{data.numberOfPlayers}} v {{data.numberOfPlayers}}</span>
+            <i class="fa fa-bullseye fa-lg fa-bullseye-color"></i><span class="feed-text">{{data.gameMode}} | {{data.numberOfPlayers}} v {{data.numberOfPlayers}}</span>
           </div>
 
         </div>
 
       <div class="col-md-6 col-sm-6">
         <div class="field">
-          <span class="glyphicon glyphicon-globe"></span><span class="game-rules feed-text">[{{data.region}}]</span>
+          <i class="fa fa-globe fa-lg fa-globe-color"></i><span class="game-rules feed-text">[{{data.region}}]</span>
         </div>
 
         <div  ng-show="data.rules" class="field">
-          <span class="glyphicon glyphicon-comment"></span><span class="game-rules feed-text">{{data.rules}}</span>
+          <i class="fa fa-comments fa-lg fa-comments-color"></i><span class="game-rules feed-text">{{data.rules}}</span>
         </div>
 
         <div class="field">
-          <span class="glyphicon glyphicon-time"></span><span class="feed-text" am-time-ago="data.created"></span>
+          <i class="fa fa-clock-o fa-lg fa-clock-o-color"></i><span class="feed-text" am-time-ago="data.created"></span>
         </div>
       </div>
 

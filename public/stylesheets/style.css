@@ -376,3 +376,12 @@ select.ng-invalid{
 input.ng-invalid{
   border:1px solid red;
 }
+
+
+/**
+Coming Soon
+**/
+
+.coming-soon{
+  text-decoration: line-through !important;
+}

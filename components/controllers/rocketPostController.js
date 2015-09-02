@@ -1,8 +1,8 @@
 app.controller('RocketPostCtrl', ['$scope', 'postSocket', 'Flash', function($scope, postSocket, Flash){
 
   $scope.consoles =[
-    {name:'PC', value:'pc'},
-    {name:'PS4', value:'ps4'}
+    {name:'PC', value:'steam'},
+    {name:'PS4', value:'psn'}
   ];
 
   $scope.gameModes = [

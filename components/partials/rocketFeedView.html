@@ -35,7 +35,7 @@
     <div class="feed-container row post-block">
         <div class="col-md-6 col-sm-6">
           <div class="field">
-          <i class="fa fa-male fa-2x fa-male-color"></i><span class="player-name feed-text">{{data.consoleID}}</span>
+            <a class="icon-link" href="https://rocketleaguestats.com/profile/{{data.consoleID | encodeURIComponent}}/{{data.consoleType.value}}" target="_blank"><i class="fa fa-male fa-2x fa-male-color"></i></a><span class="player-name feed-text">{{data.consoleID}}</span>
           </div>
 
           <div class="field">

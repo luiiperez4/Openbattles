@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="en" ng-app="openbattles")
   head
     meta( charset='utf-8')
     meta( http-equiv='X-UA-Compatible', content='IE=edge')
@@ -9,15 +9,16 @@ html(lang="en")
     meta( property="og:url" content="http://www.openbattles.com")
     meta( property="og:title" content="Openbattles.com")
     title= title
-    link( rel='stylesheet' href='libs/bootstrap/dist/css/bootstrap.min.css')
     link( rel='stylesheet' href='libs/normalize.css/normalize.css')
+    link( rel='stylesheet' href='libs/bootstrap/dist/css/bootstrap.min.css')
+
     link( rel='stylesheet' href='stylesheets/buttons.css')
     link( rel='stylesheet' href='stylesheets/animate.css')
     link( rel='stylesheet' href='libs/font-awesome/css/font-awesome.min.css')
     link( rel='stylesheet' href='stylesheets/style.css')
-  body(ng-app="openbattles")
-    div( ng-include="'partials/header.html'")
-    div( ng-include="'partials/instructions.html'")
+  body
+    include ../components/partials/header.html
+    include ../components/partials/instructions.html
     block content
 
     block footer
@@ -38,13 +39,13 @@ html(lang="en")
               i.fa.fa-facebook.fa-lg
 
     // Angular Core Components
+    script( src="libs/jquery/dist/jquery.js")
     script( src="libs/angular/angular.js")
     script( src="libs/angular-animate/angular-animate.js")
-    script( src="libs/jquery/dist/jquery.js")
-    script( src="libs/angular-socket-io/socket.js")
+    script( src='libs/angular-flash-alert/dist/angular-flash.min.js')
     script( src="libs/momentjs/moment.js")
     script( src="libs/angular-moment/angular-moment.js")
-    script( src='libs/angular-flash-alert/dist/angular-flash.min.js')
+    script( src="libs/angular-socket-io/socket.js")
 
     // Initialize Angular App
     script( src="js/app.js")

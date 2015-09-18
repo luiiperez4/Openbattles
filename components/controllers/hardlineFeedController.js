@@ -12,6 +12,7 @@ app.controller('HardlineFeedCtrl', ['$scope', 'postSocket', function($scope, pos
   $scope.gameModes = [
     {name:''},
     {name:'Rescue'},
+    {name:'Squad Heist'},
     {name:'Blood Money'},
     {name:'Heist'},
     {name:'Hotwire'},

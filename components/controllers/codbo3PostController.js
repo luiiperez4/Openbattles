@@ -35,7 +35,7 @@ app.controller('CodBO3PostCtrl', ['$scope', 'postSocket', 'Flash', function($sco
     $scope.numberOfPlayers = "";
     $scope.rules = "";
 
-    var message = '<strong>Your post was successfully entered.  Good luck on your battle!</strong>';
+    var message = '<strong>Your post was successful.  Good luck on your battle!</strong>';
     Flash.create('success', message, 'custom-class');
   }
 

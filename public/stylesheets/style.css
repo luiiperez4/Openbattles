@@ -83,12 +83,12 @@ a.home-button{
   background: #323432;
 }
 
-.intro-container{
+.header-container{
   display:flex;
   flex-direction: column;
 }
 
-.intro{
+.header{
   position:relative;
   display:flex;
   flex-direction: column;

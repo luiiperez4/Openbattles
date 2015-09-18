@@ -38,7 +38,7 @@ app.controller('RocketPostCtrl', ['$scope', 'postSocket', 'Flash', function($sco
     $scope.gameMode = "";
     $scope.rules = "";
 
-    var message = '<strong>Your post was successfully entered.  Good luck on your game!</strong>';
+    var message = '<strong>Your post was successful.  Good luck on your game!</strong>';
     Flash.create('success', message, 'custom-class');
   }
 

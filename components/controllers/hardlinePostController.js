@@ -10,6 +10,7 @@ app.controller('HardlinePostCtrl', ['$scope', 'postSocket', 'Flash', function($s
 
   $scope.gameModes = [
     {name:'Rescue', players:'5'},
+    {name:'Squad Heist', players:'5'},
     {name:'Blood Money', players:'16'},
     {name:'Heist', players:'16'},
     {name:'Hotwire', players:'16'},
@@ -41,7 +42,7 @@ app.controller('HardlinePostCtrl', ['$scope', 'postSocket', 'Flash', function($s
     $scope.serverTrue = false;
     $scope.serverName = "";
 
-    var message = '<strong>Your post was successfully entered.  Good luck on your battle!</strong>';
+    var message = '<strong>Your post was successful.  Good luck on your battle!</strong>';
     Flash.create('success', message, 'custom-class');
   }
 

@@ -161,7 +161,7 @@ io.on('connection', function(socket){
 });
 
 
-//********CODAW
+//********ROCKET LEAGUE
 ROCKET = require('../app/models/rocket');
 
 io.on('connection', function(socket){
@@ -192,6 +192,41 @@ io.on('connection', function(socket){
   });
 
 });
+
+
+//********SIX SIEGE
+SIEGE = require('../app/models/siege');
+
+io.on('connection', function(socket){
+
+  SIEGE.find({}, function(err, docs){
+    if(err)
+      throw err;
+    socket.emit('post siege', docs);
+  });
+
+  socket.on('send siege', function(data){
+    var newSIEGE = new SIEGE({
+      consoleType: data.consoleType,
+      region: data.region,
+      consoleID: data.consoleID,
+      gameMode: data.gameMode,
+      numberOfPlayers: data.numberOfPlayers,
+      rules: data.rules,
+      created: Date.now()
+    });
+    newSIEGE.save(function(err){
+      if (err)
+        throw err;
+    });
+
+    io.emit('append siege', newSIEGE);
+
+  });
+
+});
+
+
 
 
 /**

@@ -15,6 +15,7 @@ var bf4 = require('./routes/bf4');
 var codaw = require('./routes/codaw');
 var codbo3 = require('./routes/codbo3');
 var rocket = require('./routes/rocket');
+var siege = require('./routes/siege');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,11 +38,12 @@ app.use('controllers', express.static(path.join(__dirname + 'controllers')));
 
 
 app.use('/', routes);
-app.use('/', hardline);
-app.use('/', bf4);
-app.use('/', codaw);
-app.use('/', codbo3);
-app.use('/', rocket);
+app.use('/hardline', hardline);
+app.use('/bf4', bf4);
+app.use('/codaw', codaw);
+app.use('/codbo3', codbo3);
+app.use('/rocket', rocket);
+app.use('/siege', siege);
 
 
 // catch 404 and forward to error handler
